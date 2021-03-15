@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".notas">
 
-    <TextView
-        android:id="@+id/notasTitulo"
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        tools:listitem="@layout/recyclerview_item"
+        android:padding="@dimen/big_padding"
+        android:layout_marginTop="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:text="Notas:"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#2196F3"
-        tools:layout_editor_absoluteX="124dp"
-        tools:layout_editor_absoluteY="248dp"
-        android:layout_marginLeft="20sp"
-        android:layout_marginTop="20sp"
-        android:layout_marginStart="20sp" />
-</RelativeLayout>
+        android:layout_margin="16dp"
+        android:contentDescription="Adicionar Nota"
+        android:src="@drawable/ic_baseline_add_24"
+        app:backgroundTint="#2196F3"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
