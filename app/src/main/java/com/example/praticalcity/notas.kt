@@ -1,19 +1,22 @@
 package com.example.praticalcity
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.praticalcity.adapters.NotasAdapter
+import com.example.praticalcity.entities.notasEntities
 import com.example.praticalcity.viewModel.NotasViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class notas : AppCompatActivity() {
 
     private lateinit var notasViewModel: NotasViewModel
-    private val newNotaActivityRequestCode = 1
+    private val newWordActivityRequestCode = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,13 +34,28 @@ class notas : AppCompatActivity() {
         })
 
         //Fab
-        /*
         val fab = findViewById<FloatingActionButton>(R.id.fab)
-        fab.setOnClickListener(
+        fab.setOnClickListener {
             val intent = Intent(this@notas, AddNota::class.java)
-            startActivityForResult(intent, newNotaActivityRequestCode)
-        )
-        */
+            startActivityForResult(intent, newWordActivityRequestCode)
+        }
 
     }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        super.onActivityResult(requestCode, resultCode, data)
+
+        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK){
+            data?.getStringExtra(AddNota.EXTRA_REPLY)?.let {
+                val nota = notasEntities(nota = it, observacao = "Primeira nota")
+                notasViewModel.insert(nota)
+            }
+        } else {
+            Toast.makeText(
+                applicationContext, "Nota não inserida",
+                Toast.LENGTH_LONG).show()
+        }
+
+    }
+
 }
