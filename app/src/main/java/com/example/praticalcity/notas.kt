@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
+import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -29,8 +30,8 @@ class notas : AppCompatActivity() {
 
         //ViewModel
         notasViewModel = ViewModelProvider(this).get(NotasViewModel::class.java)
-        notasViewModel.allNotas.observe(this, {
-                notas -> notas?.let{adapter.setNotas(it)}
+        notasViewModel.allNotas.observe(this, Observer {
+                notass -> notass?.let { adapter.setNotas(it) }
         })
 
         //Fab
