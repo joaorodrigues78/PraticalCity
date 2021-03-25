@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
 
         //botão do login redireciona para a atividade das notas
         button_notas.setOnClickListener{
-            val intent = Intent(this, notas::class.java)
+            val intent = Intent(this, Notas::class.java)
             startActivity(intent)
         }
     }

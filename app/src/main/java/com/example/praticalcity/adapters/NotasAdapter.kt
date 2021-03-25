@@ -20,6 +20,8 @@ class NotasAdapter internal constructor(
 
     class NotasViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         val notasItemView: TextView = itemView.findViewById(R.id.textView)
+        val observacaoItemView: TextView = itemView.findViewById(R.id.textView2)
+
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NotasViewHolder {
@@ -29,7 +31,8 @@ class NotasAdapter internal constructor(
 
     override fun onBindViewHolder(holder: NotasViewHolder, position: Int) {
         val current = notass[position]
-        holder.notasItemView.text = current.nota
+        holder.notasItemView.text = current.titulo
+        holder.observacaoItemView.text = current.observacao
     }
 
     internal fun setNotas(notas: List<notasEntities>){

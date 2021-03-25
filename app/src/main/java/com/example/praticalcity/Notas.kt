@@ -14,10 +14,11 @@ import com.example.praticalcity.entities.notasEntities
 import com.example.praticalcity.viewModel.NotasViewModel
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 
-class notas : AppCompatActivity() {
+
+class Notas : AppCompatActivity() {
 
     private lateinit var notasViewModel: NotasViewModel
-    private val newWordActivityRequestCode = 1
+    private val newNotasActivityRequestCode = 1
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,14 +32,15 @@ class notas : AppCompatActivity() {
         //ViewModel
         notasViewModel = ViewModelProvider(this).get(NotasViewModel::class.java)
         notasViewModel.allNotas.observe(this, Observer {
-                notass -> notass?.let { adapter.setNotas(it) }
+                notas -> notas?.let { adapter.setNotas(it) }
         })
 
         //Fab
         val fab = findViewById<FloatingActionButton>(R.id.fab)
         fab.setOnClickListener {
-            val intent = Intent(this@notas, AddNota::class.java)
-            startActivityForResult(intent, newWordActivityRequestCode)
+            val intent = Intent(this, AddNota::class.java)
+            //startActivity(intent)
+            startActivityForResult(intent, newNotasActivityRequestCode)
         }
 
     }
@@ -46,15 +48,17 @@ class notas : AppCompatActivity() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
-        if (requestCode == newWordActivityRequestCode && resultCode == Activity.RESULT_OK){
-            data?.getStringExtra(AddNota.EXTRA_REPLY)?.let {
-                val nota = notasEntities(nota = it, observacao = "Primeira nota")
+        // ADICIONAR NOTA
+        if (requestCode == newNotasActivityRequestCode && resultCode == Activity.RESULT_OK){
+            var titulo = data?.getStringExtra(AddNota.TITULO).toString()
+            var observacao = data?.getStringExtra(AddNota.OBSERVACAO).toString()
+            val nota = notasEntities(titulo = titulo, observacao = observacao)
                 notasViewModel.insert(nota)
-            }
+            Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
+
         } else {
             Toast.makeText(
-                applicationContext, "Nota não inserida",
-                Toast.LENGTH_LONG).show()
+                applicationContext, "Nota não inserida", Toast.LENGTH_LONG).show()
         }
 
     }

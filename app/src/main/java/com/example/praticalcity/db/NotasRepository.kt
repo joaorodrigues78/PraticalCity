@@ -8,8 +8,12 @@ class NotasRepository (private val notasDao: NotasDao) {
 
     val allNotas: LiveData<List<notasEntities>> = notasDao.getNotasById()
 
-    suspend fun insert(nota: notasEntities) {
-            notasDao.insert(nota)
+    suspend fun insert(nota: notasEntities){
+        notasDao.insert(nota)
+    }
+
+    suspend fun deleteByNota(titulo: String){
+        notasDao.deleteByNota(titulo)
     }
 
 }

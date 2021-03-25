@@ -10,7 +10,7 @@ class notasEntities (
 
     @PrimaryKey(autoGenerate = true) val id: Int? = null,
 
-    @ColumnInfo(name = "nota") val nota: String,
+    @ColumnInfo(name = "titulo") val titulo: String,
 
     @ColumnInfo(name = "observacao") val observacao: String
 
