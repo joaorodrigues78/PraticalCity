@@ -5,6 +5,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.TextUtils
+import android.view.WindowManager
 import android.widget.Button
 import android.widget.EditText
 
@@ -16,6 +17,9 @@ class AddNota : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_add_nota)
+
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         editTituloView = findViewById(R.id.titulo)
         editObservacaoView = findViewById(R.id.observacao)

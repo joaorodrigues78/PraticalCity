@@ -10,7 +10,7 @@
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="#2196F3"
+        android:background="#99B5E0"
         android:padding="5dp"
         android:textStyle="bold" />
 
@@ -19,7 +19,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:background="#2196F3" />
+        android:background="#99B5E0" />
 
 
 </LinearLayout>

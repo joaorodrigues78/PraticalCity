@@ -1,4 +1,4 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -10,7 +10,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:fontFamily="sans-serif-light"
-        android:hint="Titulo"
+        android:hint="@string/edit_text_title"
         android:inputType="textAutoComplete"
         android:minHeight="16dp"
         android:textSize="18sp" />
@@ -21,19 +21,22 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:fontFamily="sans-serif-light"
-        android:hint="Observação"
+        android:hint="@string/edit_text_observacao"
         android:inputType="textAutoComplete"
         android:minHeight="16dp"
-        android:textSize="18sp" />
+        android:textSize="18sp"
+        android:layout_below="@+id/titulo"/>
 
     <Button
         android:id="@+id/button_save"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Save"
-        app:backgroundTint="#2196F3">
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/observacao"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/button_save"
+        app:backgroundTint="#5288D9">
 
     </Button>
 
-</LinearLayout>
+</RelativeLayout>

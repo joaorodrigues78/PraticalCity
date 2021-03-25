@@ -4,6 +4,7 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
@@ -23,6 +24,9 @@ class Notas : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_notas)
+
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerview)
         val adapter = NotasAdapter(this)
@@ -54,11 +58,11 @@ class Notas : AppCompatActivity() {
             var observacao = data?.getStringExtra(AddNota.OBSERVACAO).toString()
             val nota = notasEntities(titulo = titulo, observacao = observacao)
                 notasViewModel.insert(nota)
-            Toast.makeText(this, "Note Saved", Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, R.string.notaGuardada, Toast.LENGTH_SHORT).show()
 
         } else {
             Toast.makeText(
-                applicationContext, "Nota não inserida", Toast.LENGTH_LONG).show()
+                applicationContext, R.string.notaNaoGuardada, Toast.LENGTH_LONG).show()
         }
 
     }

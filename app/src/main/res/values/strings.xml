@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">PraticalCity</string>
+    <string name="button_save" translatable="false">Save</string>
+    <string name="edit_text_title" translatable="false">Title</string>
+    <string name="edit_text_observacao" translatable="false">Note</string>
+    <string name="button_notes" translatable="false">Notes</string>
+    <string name="notaGuardada" translatable="false">Note Saved</string>
+    <string name="notaNaoGuardada" translatable="false">Note NOT saved, try again</string>
 </resources>
