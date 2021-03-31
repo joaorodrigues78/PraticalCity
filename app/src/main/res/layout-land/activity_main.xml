@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/titulo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Practical City"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#3D4859"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:layout_width="245dp"
+        android:layout_height="205dp"
+        android:layout_below="@+id/titulo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/button_login"
+            android:layout_width="125dp"
+            android:layout_height="60dp"
+            android:text="Login"
+            android:textSize="30dp"
+            android:layout_margin="10sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:backgroundTint="#5288D9" />
+
+        <Button
+            android:id="@+id/button_notas"
+            android:layout_width="125dp"
+            android:layout_height="60dp"
+            android:text="@string/button_notes"
+            android:textSize="30dp"
+            android:layout_margin="10sp"
+            android:layout_toRightOf="@+id/button_login"
+            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+            app:backgroundTint="#5288D9" />
+
+    </RelativeLayout>
+
+
+
+</RelativeLayout>

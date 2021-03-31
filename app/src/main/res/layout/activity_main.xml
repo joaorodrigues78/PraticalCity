@@ -10,13 +10,12 @@
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:text="Practical City"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        android:textColor="#2196F3"
-        android:textSize="30sp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="40sp"
+        android:layout_marginTop="70sp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Practical City"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display3"
+        android:textColor="#3D4859"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,38 +23,34 @@
 
     <ImageView
         android:id="@+id/logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/logo"
+        android:layout_width="380dp"
+        android:layout_height="252dp"
         android:layout_below="@+id/titulo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40sp"
-        />
+        app:srcCompat="@drawable/logo1" />
 
     <Button
         android:id="@+id/button_login"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-light"
-        android:text="Login"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:backgroundTint="#2196F3"
-        app:iconTint="#FFFFFF"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="90sp"/>
+        android:layout_marginTop="40sp"
+        android:text="Login"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:backgroundTint="#5288D9" />
 
     <Button
-        android:id="@+id/b_notas"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="sans-serif-medium"
-        android:text="Notas"
-        android:textAppearance="@style/TextAppearance.AppCompat.Body2"
-        app:backgroundTint="#2196F3"
+        android:id="@+id/button_notas"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
         android:layout_below="@+id/button_login"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"/>
+        android:layout_marginTop="30dp"
+        android:text="@string/button_notes"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:backgroundTint="#5288D9" />
 
 
 </RelativeLayout>

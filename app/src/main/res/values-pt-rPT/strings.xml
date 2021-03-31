@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">PraticalCity</string>
+    <string name="button_save" translatable="false">Guardar</string>
+    <string name="edit_text_title">Título</string>
+    <string name="edit_text_observacao">Observação</string>
+    <string name="button_notes" translatable="false">Notas</string>
+    <string name="notaGuardada">Nota guardada</string>
+    <string name="notaNaoGuardada">Erro a guardar nota, tenta de novo</string>
+    <string name="notaEditada">Nota editada com sucesso</string>
+    <string name="notaEliminada">Nota apagada</string>
+    <string name="erroEditar" translatable="false">Erro a editar, tente novamente</string>
+    <string name="erroEliminar" translatable="false">Erro a eliminar nota, tente novamente</string>
+    <string name="button_edit">Editar</string>
+    <string name="button_delete">Eliminar</string>
+</resources>
