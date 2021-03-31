@@ -25,7 +25,8 @@
         android:inputType="textAutoComplete"
         android:minHeight="16dp"
         android:textSize="18sp"
-        android:layout_below="@+id/titulo"/>
+        android:layout_below="@+id/titulo"
+        />
 
     <Button
         android:id="@+id/button_save"
@@ -35,7 +36,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="@string/button_save"
-        app:backgroundTint="#5288D9">
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:backgroundTint="#5288D9"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_addnote">
 
     </Button>
 

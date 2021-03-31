@@ -13,7 +13,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Practical City"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#3D4859"
+        android:textColor="#3F68A6"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40sp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -38,24 +38,38 @@
 
         <Button
             android:id="@+id/button_login"
-            android:layout_width="125dp"
+            android:layout_width="155dp"
             android:layout_height="60dp"
+            android:layout_marginStart="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
             android:text="Login"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="30dp"
-            android:layout_margin="10sp"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            app:backgroundTint="#5288D9" />
+            app:backgroundTint="#5288D9"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_login"/>
 
         <Button
             android:id="@+id/button_notas"
-            android:layout_width="125dp"
+            android:layout_width="155dp"
             android:layout_height="60dp"
-            android:text="@string/button_notes"
-            android:textSize="30dp"
-            android:layout_margin="10sp"
+            android:layout_marginStart="10sp"
+            android:layout_marginLeft="10sp"
+            android:layout_marginTop="10sp"
+            android:layout_marginEnd="10sp"
+            android:layout_marginRight="10sp"
+            android:layout_marginBottom="10sp"
             android:layout_toRightOf="@+id/button_login"
-            android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-            app:backgroundTint="#5288D9" />
+            android:text="@string/button_notes"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            android:textSize="30dp"
+            app:backgroundTint="#5288D9"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_notes"/>
 
     </RelativeLayout>
 

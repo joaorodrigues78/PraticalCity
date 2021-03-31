@@ -1,4 +1,5 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
@@ -30,13 +31,15 @@
         android:id="@+id/button_edit"
         android:layout_width="155dp"
         android:layout_height="75dp"
+        android:layout_below="@+id/observacao_edit"
+        android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
         android:backgroundTint="#5288D9"
         android:text="@string/button_edit"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFF"
-        android:layout_centerHorizontal="true"
-        android:layout_below="@+id/observacao_edit"
-        />
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_editnote" />
 
     <Button
         android:id="@+id/button_delete"
@@ -48,6 +51,9 @@
         android:layout_marginBottom="16dp"
         android:backgroundTint="#A10404"
         android:text="@string/button_delete"
-        android:textColor="#FFF" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFF"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_deletenote" />
 
 </RelativeLayout>

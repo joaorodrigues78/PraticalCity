@@ -15,7 +15,7 @@
         android:fontFamily="sans-serif-smallcaps"
         android:text="Practical City"
         android:textAppearance="@style/TextAppearance.AppCompat.Display3"
-        android:textColor="#3D4859"
+        android:textColor="#3F68A6"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -38,8 +38,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40sp"
         android:text="Login"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:backgroundTint="#5288D9" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:backgroundTint="#5288D9"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_login"
+        />
 
     <Button
         android:id="@+id/button_notas"
@@ -49,8 +52,10 @@
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp"
         android:text="@string/button_notes"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:backgroundTint="#5288D9" />
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:backgroundTint="#5288D9"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_notes"/>
 
 
 </RelativeLayout>
