@@ -12,8 +12,11 @@ class NotasRepository (private val notasDao: NotasDao) {
         notasDao.insert(nota)
     }
 
-    suspend fun deleteByNota(titulo: String){
-        notasDao.deleteByNota(titulo)
+    suspend fun update(id: Int?, titulo: String, observacao: String){
+        notasDao.update(id, titulo, observacao)
     }
 
+    suspend fun delete(id: Int?){
+        notasDao.delete(id)
+    }
 }

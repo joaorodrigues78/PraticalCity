@@ -37,13 +37,6 @@ class AddNota : AppCompatActivity() {
                 setResult(Activity.RESULT_OK, replyIntent)
             }
 
-            /*if (TextUtils.isEmpty(editObservacaoView.text)) {
-                setResult(Activity.RESULT_CANCELED, replyIntent)
-            } else {
-                val observacao = editObservacaoView.text.toString()
-                replyIntent.putExtra(OBSERVACAO, observacao)
-                setResult(Activity.RESULT_OK, replyIntent)
-            }*/
             finish()
         }
     }

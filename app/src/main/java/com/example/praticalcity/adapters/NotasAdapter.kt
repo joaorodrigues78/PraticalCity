@@ -6,14 +6,12 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.praticalcity.CellClickListener
 import com.example.praticalcity.R
 import com.example.praticalcity.entities.notasEntities
 //import com.example.praticalcity.notas
-import java.util.concurrent.TimeoutException
 
-class NotasAdapter internal constructor(
-    context: Context
-): RecyclerView.Adapter<NotasAdapter.NotasViewHolder>() {
+class NotasAdapter internal constructor(context: Context, private val cellClickListener: CellClickListener): RecyclerView.Adapter<NotasAdapter.NotasViewHolder>() {
 
     private val inflater: LayoutInflater = LayoutInflater.from(context)
     private var notass = emptyList<notasEntities>()
@@ -33,6 +31,10 @@ class NotasAdapter internal constructor(
         val current = notass[position]
         holder.notasItemView.text = current.titulo
         holder.observacaoItemView.text = current.observacao
+
+        holder.itemView.setOnClickListener {
+            cellClickListener.onCellClickListener(notass[position])
+        }
     }
 
     internal fun setNotas(notas: List<notasEntities>){

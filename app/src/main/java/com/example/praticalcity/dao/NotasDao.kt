@@ -17,10 +17,12 @@ interface NotasDao {
     @Insert(onConflict = OnConflictStrategy.IGNORE)
     suspend fun insert(nota: notasEntities)
 
+    @Query("UPDATE notas_table SET titulo = :titulo, observacao = :observacao WHERE id = :id")
+    suspend fun update(id: Int?, titulo: String, observacao: String)
+
     @Query("DELETE FROM notas_table")
     suspend fun deleteAll()
 
-    @Query("DELETE FROM notas_table WHERE titulo == :nota")
-    suspend fun deleteByNota(nota: String)
-
+    @Query("DELETE FROM notas_table WHERE id = :id")
+    suspend fun delete(id: Int?)
 }
