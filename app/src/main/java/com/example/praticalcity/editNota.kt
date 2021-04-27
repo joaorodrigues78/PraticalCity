@@ -33,8 +33,6 @@ class editNota : AppCompatActivity() {
             } else {
                 val edit_titulo = editTituloView.text.toString()
                 replyIntent.putExtra(EDIT_TITULO, edit_titulo)
-                //replyIntent.putExtra(STATUS, "EDIT")
-                //setResult(Activity.RESULT_OK, replyIntent)
                 val edit_observacao = editObservacaoView.text.toString()
                 replyIntent.putExtra(EDIT_OBSERVACAO, edit_observacao)
                 replyIntent.putExtra(STATUS, "EDIT")

@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
 
         val button_notas = findViewById<Button>(R.id.button_notas)
 
-        //botão do login redireciona para a atividade das notas
+        //botão das notas redireciona para a atividade das notas
         button_notas.setOnClickListener{
             val intent = Intent(this, Notas::class.java)
             startActivity(intent)
