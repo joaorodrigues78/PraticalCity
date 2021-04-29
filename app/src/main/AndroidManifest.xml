@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.praticalcity">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.PraticalCity">
-        <activity android:name=".editNota"></activity>
+        <activity android:name=".Login"></activity>
+        <activity android:name=".situacoes" />
+        <activity android:name=".editNota" />
         <activity android:name=".AddNota" />
         <activity android:name=".Notas" />
         <activity android:name=".MainActivity">

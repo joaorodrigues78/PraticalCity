@@ -15,6 +15,9 @@ class editNota : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_edit_nota)
 
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+            WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         var editTituloView: EditText = findViewById(R.id.titulo_edit)
         var editObservacaoView: EditText = findViewById(R.id.observacao_edit)
 
