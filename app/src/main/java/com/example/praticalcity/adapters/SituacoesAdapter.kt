@@ -30,14 +30,14 @@ class SituacaoViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
     val longitude: TextView = itemView.findViewById(R.id.longitude)
     val titulo: TextView = itemView.findViewById(R.id.titulo)
     val descr: TextView = itemView.findViewById(R.id.descr)
-    //val foto: TextureView = itemView.findViewById(R.id.foto)
+    val foto: TextView = itemView.findViewById(R.id.foto)
 
     fun bind(situacao: Situacao){
         latitude.text = situacao.latitude.toString()
         longitude.text = situacao.longitude.toString()
         titulo.text = situacao.titulo
         descr.text = situacao.descr
-        //foto.text = situacao.foto
+        foto.text = situacao.foto
     }
 
 }
