@@ -72,7 +72,5 @@ class situacoes : AppCompatActivity() {
         startActivity(intent)
         finish()
     }
-
-
 }
 
