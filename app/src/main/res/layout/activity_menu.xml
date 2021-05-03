@@ -35,6 +35,21 @@
         />
 
     <Button
+        android:id="@+id/button_lista"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:text="@string/button_lista"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:backgroundTint="#5288D9"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_list"
+        android:layout_below="@+id/button_maps"
+        android:layout_centerHorizontal="true"
+        android:onClick="situacoes"
+        />
+
+    <Button
         android:id="@+id/button_reportar"
         android:layout_width="155dp"
         android:layout_height="75dp"
@@ -44,7 +59,7 @@
         app:backgroundTint="#5288D9"
         app:cornerRadius="20dp"
         app:icon="@drawable/ic_add_location"
-        android:layout_below="@+id/button_maps"
+        android:layout_below="@+id/button_lista"
         android:layout_centerHorizontal="true"
         />
 
@@ -61,7 +76,7 @@
         app:icon="@drawable/ic_logout"
         android:layout_below="@+id/button_reportar"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="180sp"
+        android:layout_marginTop="110sp"
         />
 
 </RelativeLayout>

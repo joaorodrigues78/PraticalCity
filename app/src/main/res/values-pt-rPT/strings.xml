@@ -19,4 +19,5 @@
     <string name="edit_lembrar" translatable="false">Lembrar-me</string>
     <string name="username">Nome de Utilizador</string>
     <string name="password">Palavra-passe</string>
+    <string name="button_lista">Lista</string>
 </resources>

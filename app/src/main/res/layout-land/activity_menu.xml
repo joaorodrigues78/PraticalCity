@@ -23,7 +23,7 @@
         android:id="@+id/linearbuttons"
         android:layout_below="@+id/imageVieww"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="60mm"
+        android:layout_marginLeft="33mm"
         >
 
         <Button
@@ -39,6 +39,19 @@
             app:icon="@drawable/ic_gps" />
 
         <Button
+            android:id="@+id/button_lista"
+            android:layout_width="155dp"
+            android:layout_height="75dp"
+            android:text="@string/button_lista"
+            android:textSize="20sp"
+            android:textAppearance="@style/TextAppearance.AppCompat.Large"
+            app:backgroundTint="#5288D9"
+            app:cornerRadius="20dp"
+            app:icon="@drawable/ic_list"
+            android:layout_marginLeft="25sp"
+            />
+
+        <Button
             android:id="@+id/button_reportar"
             android:layout_width="155dp"
             android:layout_height="75dp"
@@ -48,7 +61,6 @@
             app:backgroundTint="#5288D9"
             app:cornerRadius="20dp"
             app:icon="@drawable/ic_add_location"
-            android:layout_centerHorizontal="true"
             android:layout_marginLeft="25sp"/>
 
     </LinearLayout>
@@ -56,13 +68,13 @@
 
     <Button
         android:id="@+id/button_logout"
-        android:layout_width="155dp"
-        android:layout_height="75dp"
+        android:layout_width="125dp"
+        android:layout_height="60dp"
         android:text="Logout"
         android:onClick="logout"
-        android:textSize="20sp"
+        android:textSize="15sp"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        app:backgroundTint="#5288D9"
+        app:backgroundTint="#233A5C"
         app:cornerRadius="20dp"
         app:icon="@drawable/ic_logout"
         android:layout_below="@+id/linearbuttons"

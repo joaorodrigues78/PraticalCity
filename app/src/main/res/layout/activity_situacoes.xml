@@ -18,12 +18,11 @@
         />
 
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="horizontal"
-        android:layout_centerVertical="true"
-        android:layout_marginHorizontal="10dp"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="15dp"
         >
 
@@ -31,7 +30,7 @@
             android:id="@+id/button_vermapa"
             android:layout_width="120dp"
             android:layout_height="75dp"
-            android:onClick="getSingle"
+            android:onClick="situacoes_mapa"
             android:text="@string/button_maps"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             android:textSize="14sp"

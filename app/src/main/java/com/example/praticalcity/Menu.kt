@@ -18,15 +18,14 @@ class Menu : AppCompatActivity() {
         shared_preferences = getSharedPreferences("shared_preferences", Context.MODE_PRIVATE)
 
     }
-    /*
-    fun situacoes(view: View){
-        val intent = Intent(this@Menu, situacoes::class.java)
-        startActivity(intent)
-    }
-    */
 
     fun situacoes_mapa(view: View){
         val intent = Intent(this@Menu, MapsActivity::class.java)
+        startActivity(intent)
+    }
+
+    fun situacoes(view: View){
+        val intent = Intent(this@Menu, situacoes::class.java)
         startActivity(intent)
     }
 

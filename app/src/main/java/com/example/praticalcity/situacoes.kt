@@ -46,6 +46,7 @@ class situacoes : AppCompatActivity() {
         })
     }
 
+    /*
     fun getSingle(view: View){
         val request = ServiceBuilder.buildService(EndPoints::class.java)
         val call = request.getSituacaoById(1)
@@ -61,7 +62,13 @@ class situacoes : AppCompatActivity() {
                 Toast.makeText(this@situacoes,"${t.message}", Toast.LENGTH_SHORT).show()
             }
         })
+    }*/
+
+    fun situacoes_mapa(view: View){
+        val intent = Intent(this@situacoes, MapsActivity::class.java)
+        startActivity(intent)
     }
+
 
     fun logout(view: View){
         val shared_preferences_edit : SharedPreferences.Editor = shared_preferences.edit()
