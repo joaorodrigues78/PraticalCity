@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:fontFamily="sans-serif-light"
-        android:hint="sss"
+        android:hint="Username"
         android:minHeight="16dp"
         android:textSize="18sp"
         android:layout_below="@+id/imageVieww"/>
@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:fontFamily="sans-serif-light"
-        android:hint="sss"
+        android:hint="Password"
         android:inputType="textPassword"
         android:minHeight="16dp"
         android:textSize="18sp"
@@ -44,7 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
-        android:text="ss"
+        android:text="Lembrar-me?"
         android:layout_below="@+id/password"/>
 
     <Button
