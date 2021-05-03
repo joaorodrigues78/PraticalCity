@@ -37,11 +37,11 @@
         android:layout_below="@+id/logo"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="40sp"
-        android:text="Login"
+        android:text="@string/title_activity_maps"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         app:backgroundTint="#5288D9"
         app:cornerRadius="20dp"
-        app:icon="@drawable/ic_login"
+        app:icon="@drawable/ic_gps"
         />
 
     <Button

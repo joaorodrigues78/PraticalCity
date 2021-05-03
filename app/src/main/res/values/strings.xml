@@ -12,5 +12,10 @@
     <string name="erroEliminar" translatable="false">Error to delete, try again</string>
     <string name="button_edit" translatable="false">Edit</string>
     <string name="button_delete" translatable="false">Delete</string>
-    <string name="title_activity_maps">Map</string>
+    <string name="title_activity_maps" translatable="false">Map</string>
+    <string name="button_maps" translatable="false">Map</string>
+    <string name="button_report" translatable="false">Report</string>
+    <string name="edit_lembrar" translatable="false">Remember me</string>
+    <string name="username" translatable="false">Username</string>
+    <string name="password" translatable="false">Password</string>
 </resources>

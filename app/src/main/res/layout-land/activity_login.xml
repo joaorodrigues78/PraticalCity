@@ -10,17 +10,18 @@
 
     <ImageView
         android:id="@+id/imageVieww"
-        android:layout_width="326dp"
-        android:layout_height="150dp"
-        android:layout_margin="50dp"
+        android:layout_width="226dp"
+        android:layout_height="80dp"
+        android:layout_margin="10dp"
         app:srcCompat="@drawable/logo1"
+        android:layout_centerHorizontal="true"
         />
 
     <EditText
         android:id="@+id/username"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="5dp"
         android:fontFamily="sans-serif-light"
         android:hint="@string/username"
         android:minHeight="16dp"
@@ -31,7 +32,7 @@
         android:id="@+id/password"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="5dp"
         android:fontFamily="sans-serif-light"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -43,7 +44,7 @@
         android:id="@+id/checkBox_Remember"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="2dp"
         android:text="@string/edit_lembrar"
         android:layout_below="@+id/password"/>
 
