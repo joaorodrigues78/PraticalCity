@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Menu">
+
+
+    <ImageView
+        android:id="@+id/imageVieww"
+        android:layout_width="362dp"
+        android:layout_height="204dp"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:layout_marginBottom="50dp"
+        app:srcCompat="@drawable/logo1" />
+
+    <Button
+        android:id="@+id/button_maps"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:text="Mapa"
+        android:textSize="20sp"
+        app:backgroundTint="#5288D9"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_gps"
+        android:layout_below="@+id/imageVieww"
+        android:onClick="situacoes_mapa"
+        />
+
+    <Button
+        android:id="@+id/button_reportar"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:text="Reportar"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:backgroundTint="#5288D9"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_add_location"
+        android:layout_below="@+id/button_maps"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/button_logout"
+        android:layout_width="155dp"
+        android:layout_height="75dp"
+        android:text="Logout"
+        android:onClick="logout"
+        android:textSize="20sp"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:backgroundTint="#5288D9"
+        app:cornerRadius="20dp"
+        app:icon="@drawable/ic_logout"
+        android:layout_below="@+id/button_reportar"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="180sp"
+        />
+
+</RelativeLayout>

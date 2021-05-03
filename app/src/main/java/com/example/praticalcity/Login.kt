@@ -41,7 +41,7 @@ class Login : AppCompatActivity() {
         remember = shared_preferences.getBoolean("remember", false)
 
         if(remember){
-            val intent = Intent(this@Login, situacoes::class.java)
+            val intent = Intent(this@Login, Menu::class.java)
             startActivity(intent);
             finish()
         }
@@ -70,7 +70,7 @@ class Login : AppCompatActivity() {
                             shared_preferences_edit.putBoolean("remember", checked_remember)
                             shared_preferences_edit.apply()
 
-                            val intent = Intent(this@Login, situacoes::class.java)
+                            val intent = Intent(this@Login, Menu::class.java)
                             startActivity(intent)
                             finish()
                         }
