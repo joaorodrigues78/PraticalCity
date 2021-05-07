@@ -20,4 +20,6 @@
     <string name="username">Nome de Utilizador</string>
     <string name="password">Palavra-passe</string>
     <string name="button_lista">Lista</string>
+    <string name="erroLogin" translatable="false">Erro no login, tente novamente</string>
+    <string name="situacoes_reportadas" translatable="false">Problemas reportados</string>
 </resources>

@@ -6,7 +6,6 @@ import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import com.example.praticalcity.api.Situacao
 
 class Menu : AppCompatActivity() {
 

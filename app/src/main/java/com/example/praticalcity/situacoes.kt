@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.praticalcity.adapters.SituacoesAdapter
 import com.example.praticalcity.api.EndPoints
 import com.example.praticalcity.api.ServiceBuilder
-import com.example.praticalcity.api.Situacao
+import com.example.praticalcity.api.Situacoes
 import retrofit2.Response
 import retrofit2.Call
 import retrofit2.Callback
@@ -30,8 +30,8 @@ class situacoes : AppCompatActivity() {
         val call = request.getSituacoes()
         var recyclerView = findViewById<RecyclerView>(R.id.recyclerview_problema)
 
-        call.enqueue(object : Callback<List<Situacao>> {
-            override fun onResponse(call: Call<List<Situacao>>, response: Response<List<Situacao>>){
+        call.enqueue(object : Callback<List<Situacoes>> {
+            override fun onResponse(call: Call<List<Situacoes>>, response: Response<List<Situacoes>>){
                 if (response.isSuccessful){
                     recyclerView.apply {
                         setHasFixedSize(true)
@@ -40,29 +40,12 @@ class situacoes : AppCompatActivity() {
                     }
                 }
             }
-            override fun onFailure(call: Call<List<Situacao>>, t: Throwable){
+            override fun onFailure(call: Call<List<Situacoes>>, t: Throwable){
                 Toast.makeText(this@situacoes,"${t.message}", Toast.LENGTH_LONG).show()
             }
         })
     }
 
-    /*
-    fun getSingle(view: View){
-        val request = ServiceBuilder.buildService(EndPoints::class.java)
-        val call = request.getSituacaoById(1)
-
-        call.enqueue(object : Callback<Situacao>{
-            override fun onResponse(call: Call<Situacao>, response: Response<Situacao>){
-                if (response.isSuccessful){
-                    val c: Situacao = response.body()!!
-                    Toast.makeText(this@situacoes,"Situacao obtida", Toast.LENGTH_SHORT).show()
-                }
-            }
-            override fun onFailure(call: Call<Situacao>, t: Throwable){
-                Toast.makeText(this@situacoes,"${t.message}", Toast.LENGTH_SHORT).show()
-            }
-        })
-    }*/
 
     fun situacoes_mapa(view: View){
         val intent = Intent(this@situacoes, MapsActivity::class.java)

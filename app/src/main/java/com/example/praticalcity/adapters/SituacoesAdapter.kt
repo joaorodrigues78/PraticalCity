@@ -6,9 +6,9 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.praticalcity.R
-import com.example.praticalcity.api.Situacao
+import com.example.praticalcity.api.Situacoes
 
-class SituacoesAdapter (val situacao: List<Situacao>) : RecyclerView.Adapter<SituacaoViewHolder>(){
+class SituacoesAdapter (val situacao: List<Situacoes>) : RecyclerView.Adapter<SituacaoViewHolder>(){
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SituacaoViewHolder {
         val itemView = LayoutInflater.from(parent.context).inflate(R.layout.recyclerview_itemsituacoes,parent, false)
         return SituacaoViewHolder(itemView)
@@ -30,7 +30,7 @@ class SituacaoViewHolder(itemView : View): RecyclerView.ViewHolder(itemView){
     val titulo: TextView = itemView.findViewById(R.id.titulo)
     val descr: TextView = itemView.findViewById(R.id.descr)
 
-    fun bind(situacao: Situacao){
+    fun bind(situacao: Situacoes){
         latitude.text = situacao.latitude.toString()
         longitude.text = situacao.longitude.toString()
         titulo.text = situacao.titulo

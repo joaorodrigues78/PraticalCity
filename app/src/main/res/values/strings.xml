@@ -19,4 +19,6 @@
     <string name="username" translatable="false">Username</string>
     <string name="password" translatable="false">Password</string>
     <string name="button_lista" translatable="false">List</string>
+    <string name="erroLogin" translatable="false">Login fail, try again</string>
+    <string name="situacoes_reportadas" translatable="false">Reported issues</string>
 </resources>

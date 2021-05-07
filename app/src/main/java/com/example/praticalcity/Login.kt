@@ -59,7 +59,7 @@ class Login : AppCompatActivity() {
                 if (response.isSuccessful){
                     val c: OutputLogin = response.body()!!
                     if(TextUtils.isEmpty(editUsernameView.text) || TextUtils.isEmpty(editPasswordView.text)) {
-                        Toast.makeText(this@Login, "Erro no login", Toast.LENGTH_LONG).show()
+                        Toast.makeText(this@Login, R.string.erroLogin, Toast.LENGTH_LONG).show()
                     }else{
                         if(c.status =="false"){
                             Toast.makeText(this@Login, c.MSG, Toast.LENGTH_LONG).show()

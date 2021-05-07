@@ -6,6 +6,18 @@
     android:layout_height="match_parent"
     tools:context=".situacoes">
 
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="30sp"
+        android:text="@string/situacoes_reportadas"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:textColor="#3F68A6"
+        android:textSize="20dp">
+    </TextView>
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerview_problema"
         android:layout_width="match_parent"
@@ -15,6 +27,7 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_below="@+id/textView1"
         />
 
     <RelativeLayout

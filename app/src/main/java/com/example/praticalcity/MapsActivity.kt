@@ -1,8 +1,5 @@
 package com.example.praticalcity
 
-import android.content.Context
-import android.content.Intent
-import android.content.SharedPreferences
 import android.content.pm.PackageManager
 import android.location.Location
 import androidx.appcompat.app.AppCompatActivity
@@ -11,7 +8,7 @@ import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.praticalcity.api.EndPoints
 import com.example.praticalcity.api.ServiceBuilder
-import com.example.praticalcity.api.Situacao
+import com.example.praticalcity.api.Situacoes
 import com.google.android.gms.location.FusedLocationProviderClient
 import com.google.android.gms.location.LocationServices
 
@@ -19,9 +16,7 @@ import com.google.android.gms.maps.CameraUpdateFactory
 import com.google.android.gms.maps.GoogleMap
 import com.google.android.gms.maps.OnMapReadyCallback
 import com.google.android.gms.maps.SupportMapFragment
-import com.google.android.gms.maps.model.BitmapDescriptorFactory
 import com.google.android.gms.maps.model.LatLng
-import com.google.android.gms.maps.model.Marker
 import com.google.android.gms.maps.model.MarkerOptions
 import com.example.praticalcity.api.*
 import retrofit2.Call
@@ -31,7 +26,7 @@ import retrofit2.Response
 class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
     private lateinit var mMap: GoogleMap
-    private lateinit var  situacoes: List<Situacao>
+    private lateinit var  situacoes: List<Situacoes>
     private lateinit var lastLocation: Location
     private lateinit var fusedLocationClient: FusedLocationProviderClient
     private val LOCATION_PERMISSION_REQUEST_CODE = 1
@@ -51,19 +46,21 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         val call = request.getSituacoes()
         var position: LatLng
 
-        call.enqueue(object : Callback<List<Situacao>> {
-            override fun onResponse(call: Call<List<Situacao>>, response: Response<List<Situacao>>){
-                if (response.isSuccessful){
+        call.enqueue(object : Callback<List<Situacoes>> {
+            override fun onResponse(call: Call<List<Situacoes>>, response: Response<List<Situacoes>>) {
+                Toast.makeText(this@MapsActivity, "asdasdadada", Toast.LENGTH_SHORT).show()
+
+                if (response.isSuccessful) {
                     situacoes = response.body()!!
-                    for (situacao in situacoes){
+                    for (situacao in situacoes) {
                         position = LatLng(situacao.latitude.toDouble(), situacao.longitude.toDouble())
                         mMap.addMarker(MarkerOptions().position(position).title(situacao.titulo + "-" + situacao.descr))
-
                     }
                 }
             }
-            override fun onFailure(call: Call<List<Situacao>>, t: Throwable){
-                Toast.makeText(this@MapsActivity,"${t.message}", Toast.LENGTH_LONG).show()
+
+            override fun onFailure(call: Call<List<Situacoes>>, t: Throwable) {
+                Toast.makeText(this@MapsActivity, "${t.message}", Toast.LENGTH_LONG).show()
             }
         })
 
@@ -82,11 +79,10 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         mMap = googleMap
 
         // Add a marker in Sydney and move the camera
-        //val sydney = LatLng(-34.0, 151.0)
-        //mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
-        //mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
+        val sydney = LatLng(-34.0, 151.0)
+        mMap.addMarker(MarkerOptions().position(sydney).title("Marker in Sydney"))
+        mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney))
 
-        //mMap.setOnInfoWindowClickListener(this)
         setUpMap()
     }
 
