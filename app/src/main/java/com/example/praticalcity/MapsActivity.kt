@@ -48,7 +48,6 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
 
         call.enqueue(object : Callback<List<Situacoes>> {
             override fun onResponse(call: Call<List<Situacoes>>, response: Response<List<Situacoes>>) {
-                Toast.makeText(this@MapsActivity, "asdasdadada", Toast.LENGTH_SHORT).show()
 
                 if (response.isSuccessful) {
                     situacoes = response.body()!!
