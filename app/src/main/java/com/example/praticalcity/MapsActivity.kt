@@ -49,6 +49,7 @@ class MapsActivity : AppCompatActivity(), OnMapReadyCallback {
         call.enqueue(object : Callback<List<Situacoes>> {
             override fun onResponse(call: Call<List<Situacoes>>, response: Response<List<Situacoes>>) {
 
+
                 if (response.isSuccessful) {
                     situacoes = response.body()!!
                     for (situacao in situacoes) {
